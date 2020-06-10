@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Try Not To Laugh Challenge</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="introjs.min.css" type="text/css"/>
+    <script src="intro.min.js"></script>
+    <script src="clmtrackr.js"></script>
+    <script src="model_pca_20_svm.js"></script>
+    <script src="emotion_classifier.js"></script>
+    <script src="emotionmodel.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+<div id="app">
+    <h1>Try Not To Laugh Challenge</h1>
+    <div id="content">
+        <div id="preview">
+
+            <div id="camera" data-intro="Try to look directly into the camera." data-step="1">
+                <video autoplay height="200" id="camera--video" loop playsinline preload="auto" width="300" data-intro="Use a plain background and take off your glasses."  data-step="2"></video>
+                <canvas height="200" id="camera--overlay" width="300"></canvas>
+            </div>
+
+            <div id="laugh-o-meter" data-intro="Keep laugh-o-meter below 60%..." data-step="3">Laugh-o-meter: ?</div>
+            <div id="laughs"  data-intro="...or it'll be counted as a laugh ;)" data-step="4">Laughs: -</div>
+        </div>
+        <div id="video">
+            <div id="final" class="hidden"></div>
+            <div id="player" class="loading"></div>
+            <div id="selector"  data-intro="Choose the challenge!" data-step="5"></div>
+            <button id="control-button" class="hidden">label label label</button>
+        </div>
+        <footer>Thanks: <a href="https://introjs.com/" target="_blank">intro.js</a> & <a href="https://github.com/auduno/clmtrackr/" target="_blank">clmtracker</a></footer>
+    </div>
+</div>
+</body>
+</html>
